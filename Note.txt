@@ -1,0 +1,10 @@
+Important command lines 
+
+//Generate package.json setting file 
+npm init -y 
+
+//Install Cypress 
+npm install Cypress 
+
+//Run Cypress
+npx cypress open
