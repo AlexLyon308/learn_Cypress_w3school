@@ -6,5 +6,14 @@ npm init -y
 //Install Cypress 
 npm install Cypress 
 
-//Run Cypress
-npx cypress open
+//Open Cypress app 
+npx cypress open 
+
+//Run Cypress in terminal (all test files) 
+npx cypress run  
+
+//Run Cypress in terminal (single files) 
+npx cypress run --spec *path to the file* 
+
+ex : npx cypress run --spec cypress/e2e/Amatrium/AmatriumLogin.cy.js 
+
