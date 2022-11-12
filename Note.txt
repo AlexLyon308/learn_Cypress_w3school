@@ -15,5 +15,5 @@ npx cypress run
 //Run Cypress in terminal (single files) 
 npx cypress run --spec *path to the file* 
 
-ex : npx cypress run --spec cypress/e2e/Amatrium/AmatriumLogin.cy.js 
+ex : npx cypress run --spec cypress/e2e/Amatrium/Test_AmatriumLogin.cy.js 
 
