@@ -37,7 +37,7 @@ context('Amatrium Main Menu test matrix', () => {
 
         it('It will check Term panel ', () => {
 
-            cy.get(termOpenButton).should('have.text', 'Terms of Service')
+            cy.get('#chakra-modal--header-5').should('have.text', 'Terms of Service')
         }
         );
 
