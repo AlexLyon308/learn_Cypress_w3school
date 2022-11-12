@@ -16,6 +16,12 @@ context('Amatrium Main Menu test matrix', () => {
 
     describe('Amatrium Main Menu test matrix', () => {
 
+        it('It will navigate to Privacy Policy', () => {
+            expect(AmatriumElements.mainScreen_SendYourSuggestion).to.exist
+            cy.get(AmatriumElements.mainScreen_SendYourSuggestion).trigger('mouseover')
+        }
+        );
+
         /*
         it('It will navigate to Privacy Policy', () => {
             expect(AmatriumElements.privacyPolicyOpenButton, 'Privacy Policy Open button should be available').to.exist
