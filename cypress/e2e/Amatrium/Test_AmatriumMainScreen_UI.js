@@ -3,13 +3,20 @@
 
 import AmatriumElements from './AmtriumElements.js';
 
-context('Amatrium Login Screen test matrix', () => {
+context('Amatrium Main Menu test matrix', () => {
     before(() => {
-        cy.visit('dev.amatrium.com')
+        cy.visit('dev.amatrium.com');
+
+        cy.get(AmatriumElements.emailAddressField)
+          .type("britishcolumbia247@gmail.com");
+
+        cy.get(AmatriumElements.passWordField)
+          .type("w7ekg2w")
     });
 
-    describe('Amatrium Login Screen test matrix', () => {
+    describe('Amatrium Main Menu test matrix', () => {
 
+        /*
         it('It will navigate to Privacy Policy', () => {
             expect(AmatriumElements.privacyPolicyOpenButton, 'Privacy Policy Open button should be available').to.exist
             cy.get(AmatriumElements.privacyPolicyOpenButton).click()
@@ -84,14 +91,6 @@ context('Amatrium Login Screen test matrix', () => {
 
         }
         );
-        
-        it('It will check Login process', () => {
-            cy.get(AmatriumElements.mainScreen_HeaderLogo).should('exist')
-            
-            cy.get(AmatriumElements.mainScreen_HeaderLogo).find('svg').should('be.visible')
-            
-        }
-        );
-
+        */
     })
 });
