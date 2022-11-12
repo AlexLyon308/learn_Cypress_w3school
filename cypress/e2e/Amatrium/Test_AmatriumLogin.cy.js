@@ -28,7 +28,7 @@ context('Amatrium Main Menu test matrix', () => {
         }
         );
 
-        it('It will open Term', () => {
+        it('It will open Term, using cy.contains', () => {
             expect(AmatriumElements.termOpenButton, 'Term Open button should be available').to.exist
             cy.contains('Terms').click()
             //cy.get(AmatriumElements.TermOpenButton).click()
@@ -37,7 +37,7 @@ context('Amatrium Main Menu test matrix', () => {
 
         it('It will check Term panel ', () => {
 
-            cy.get('#chakra-modal--header-5').should('have.text', 'Terms of Service')
+            cy.get(termOpenButton).should('have.text', 'Terms of Service')
         }
         );
 
