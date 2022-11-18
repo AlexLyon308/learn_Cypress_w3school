@@ -12,13 +12,15 @@ context('Amatrium Main Menu test matrix', () => {
 
         cy.get(AmatriumElements.passWordField)
           .type("w7ekg2w")
+
+          cy.get(AmatriumElements.loginbutton).click()
     });
 
     describe('Amatrium Main Menu test matrix', () => {
 
         it('It will navigate to Privacy Policy', () => {
-            expect(AmatriumElements.mainScreen_SendYourSuggestion).to.exist
-            cy.get(AmatriumElements.mainScreen_SendYourSuggestion).trigger('mouseover')
+            //expect(AmatriumElements.mainScreen_SendYourSuggestion).to.exist
+            cy.get(AmatriumElements.mainScreen_UnitConversionTable_Button).trigger('mouseover', {force:true})
         }
         );
 

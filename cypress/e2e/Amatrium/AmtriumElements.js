@@ -23,13 +23,13 @@ export default class AmatriumElements {
     static mainScreen_CompanyButton 
     static mainScreen_SearchButton 
     static mainScreen_SearchBox 
-    static mainScreen_UnitConversionTable_Button = '#chakra-modal--body-70 > div:nth-child(1) > video' ;
+    static mainScreen_UnitConversionTable_Button = ' div[class ="css-1dqbl05"] > button[class="chakra-button css-1op0i7"]' ;
     static mainScreen_SendYourSuggestion 
     static mainScreen_AskAmatriumExpert 
     static mainScreen_ChatBot 
     static mainScreen_MaterialSearchHeader
     static mainScreen_LogOutButton
-    static mainScreen_HowItWorks = 'button[class="chakra-button css-1op0i7"]'; 
+    static mainScreen_HowItWorks  
     static mainScreen_HowItWorks_Tooltips = '.introjs-tooltip-title'; 
     static mainScreen_HowItWorks_IntroductionVideo = '#chakra-modal--body-70 > div:nth-child(1) > video';
 };
