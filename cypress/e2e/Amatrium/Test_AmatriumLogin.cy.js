@@ -55,24 +55,23 @@ context('Amatrium Login Screen test matrix', () => {
         );
 
         it('It will input password in Password field', () => {
-            cy.get(AmatriumElements.passWordField).type("w7ekg2w").should('have.value', 'w7ekg2w')
-
+            cy.get(AmatriumElements.passwordField).type("w7ekg2w").should('have.value', 'w7ekg2w')
 
         }
         );
 
         it('It will unhide password in Password field', () => {
-            cy.get(AmatriumElements.passWordHideButton).should('exist')
-            cy.get(AmatriumElements.passWordHideButton).click()
+            cy.get(AmatriumElements.passwordHideButton).should('exist')
+            cy.get(AmatriumElements.passwordHideButton).click()
 
-            cy.get(AmatriumElements.passWordHideButton).click()
+            cy.get(AmatriumElements.passwordHideButton).click()
         }
         );
 
        
 
         it('It will check Login button , with multiple assertion', () => {
-            cy.get(AmatriumElements.loginbutton)
+            cy.get(AmatriumElements.loginButton)
 
             //.should('exist').should('have.text', 'Login')
 
@@ -80,7 +79,7 @@ context('Amatrium Login Screen test matrix', () => {
                 expect(item).to.exist
                 expect(item).to.have.text('Login')
             })
-            cy.get(AmatriumElements.loginbutton).click()
+            cy.get(AmatriumElements.loginButton).click()
 
         }
         );
