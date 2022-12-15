@@ -13,7 +13,7 @@ context('Amatrium Main Menu test matrix', () => {
         cy.get(AmatriumElements.passWordField)
           .type("w7ekg2w")
 
-          cy.get(AmatriumElements.loginbutton).click()
+          cy.get(AmatriumElements.loginButton).click()
     });
 
     describe('Amatrium Main Menu test matrix', () => {
