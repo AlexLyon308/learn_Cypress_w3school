@@ -22,11 +22,8 @@ export default class AmatriumElements {
     static mainScreen_Privacy_Header = '#chakra-modal--header-24'; 
     static mainScreen_Privacy_CloseButton = '.chakra-modal__close-btn';
     static mainScreen_HeaderLogo = 'div.css-hrncnr';
-    static mainScreen_SearchModuleButton 
-    static mainScreen_PredictButton 
-    static mainScreen_CompanyButton 
-    static mainScreen_SearchButton 
-    static mainScreen_SearchBox 
+    
+
     static mainScreen_UnitConversionTable = '.css-1dqbl05 > :nth-child(1)' ;
     static mainScreen_UnitConversionTable_Header = '#chakra-modal--header-14';
     static mainScreen_UnitConversionTable_CloseButton = '.chakra-modal__footer > .chakra-button';
@@ -36,17 +33,33 @@ export default class AmatriumElements {
     static mainScreen_SendYourSuggestion_SendButton = '.css-1xl7tdj';
     static mainScreen_SendYourSuggestion_CloseButton = '.css-vf2uxf';
     static mainScreen_SendYourSuggestion_TextBox = '#suggestion'; 
-    static mainScreen_SendYourSuggestion_Feedback = '#field-26-feedback';
+    static mainScreen_SendYourSuggestion_Body = '#chakra-modal--body-18';
     static mainScreen_SendYourSuggestion_SuccessAlert = '#toast-4-title';
+
+    static mainScreen_AskAmatriumExpert = '.css-1ewfy1t'; 
+    static mainScreen_AskAmatriumExpert_Header = '#chakra-modal--header-22'; 
+    static mainScreen_AskAmatriumExpert_SendButton = '.css-1xl7tdj'; 
+    static mainScreen_AskAmatriumExpert_CloseButton = '.css-197h7a4'; 
+    static mainScreen_AskAmatriumExpert_Body = '#chakra-modal--body-22';
+    static mainScreen_AskAmatriumExpert_TextBox_YourQuestion = '#question'; 
+    static mainScreen_AskAmatriumExpert_TextBox_YourMessage = '#message';
+
+
     
-    static mainScreen_AskAmatriumExpert 
-    static mainScreen_ChatBot 
-    static mainScreen_MaterialSearchHeader
-    static mainScreen_LogOutButton
     static mainScreen_HowItWorks  = '.css-1hc8ggd';
     static mainScreen_HowItWorks_Tooltips = '.introjs-tooltip-title'; 
     static mainScreen_HowItWorks_SkipButton = '.introjs-skipbutton';
     static mainScreen_HowItWorks_IntroductionVideo = '#chakra-modal--body-25 > div > video';
     static mainScreen_HowItWorks_IntroductionVideo_CloseButton = '.css-jhfvrr > button'; 
+
+    static mainScreen_ChatBot 
+    static mainScreen_MaterialSearchHeader
+    static mainScreen_LogOutButton
+
+    static mainScreen_SearchModuleButton 
+    static mainScreen_PredictButton 
+    static mainScreen_CompanyButton 
+    static mainScreen_SearchButton 
+    static mainScreen_SearchBox 
 };
 
