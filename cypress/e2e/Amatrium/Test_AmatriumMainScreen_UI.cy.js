@@ -19,6 +19,18 @@ context('Amatrium Main Menu test matrix', () => {
 
   describe('Amatrium Main Menu test matrix', () => {
 
+    it('It will check successful Login process and Header Logo', () => {
+      cy.get(AmatriumElements.mainScreen_HeaderLogo)
+        .should('exist');
+      
+      cy.get(AmatriumElements.mainScreen_HeaderLogo)
+        .find('svg')
+        .should('be.visible');
+      
+  }
+  );
+
+
     it('It will check "How it works" feature ', () => {
 
       cy.get(AmatriumElements.mainScreen_HowItWorks)
@@ -130,9 +142,9 @@ context('Amatrium Main Menu test matrix', () => {
       .should('have.text','Send') 
       .click(); 
 
-    cy.get(AmatriumElements.mainScreen_SendYourSuggestion_Feedback)
+      cy.get(AmatriumElements.mainScreen_SendYourSuggestion_Body)
       .should('exist')
-      .should('have.text', 'Suggestion is required'); 
+      .should('contain.text', 'Suggestion is required'); 
 
       cy.get(AmatriumElements.mainScreen_SendYourSuggestion_CloseButton)
       .should('exist')
@@ -141,36 +153,90 @@ context('Amatrium Main Menu test matrix', () => {
 
   });
 
-  it('It will check Send Your Suggestion if successful', () => { 
+  it('It will check Send Your Suggestion if succeeded', () => { 
     cy.get(AmatriumElements.mainScreen_SendYourSuggestion)
+      .should('exist')
+      .click();
+
+    cy.get(AmatriumElements.mainScreen_SendYourSuggestion_TextBox)
+      .should('exist')
+      .type('test');
+      
+    cy.get(AmatriumElements.mainScreen_SendYourSuggestion_SendButton)
+      .should('exist') 
+      .should('have.text','Send') 
+      .click(); 
+
+      cy.get(AmatriumElements.mainScreen_SendYourSuggestion_CloseButton)
+      .should('exist')
+      .should('have.text','Close') 
+      .click();
+
+  });
+
+  it('It will check Ask Amatrium Expert if failed', () => { 
+    cy.get(AmatriumElements.mainScreen_AskAmatriumExpert)
     .should('exist')
     .click();
 
-  cy.get(AmatriumElements.mainScreen_SendYourSuggestion_Header)
-    .should('have.text', 'Send your suggestion to Amatrium');
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_Header)
+    .should('have.text', 'Send your Question to Amatrium expert');
 
-  cy.get(AmatriumElements.mainScreen_SendYourSuggestion_TextBox)
-    .should('exist')
-    .type('test');
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_TextBox_YourQuestion)
+    .should('exist');
+  
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_TextBox_YourMessage)
+    .should('exist');
     
-  cy.get(AmatriumElements.mainScreen_SendYourSuggestion_SendButton)
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_SendButton)
     .should('exist') 
     .should('have.text','Send') 
     .click()
-    .wait(2000); 
+    .wait(2000);
+     
 
-  cy.get(AmatriumElements.mainScreen_SendYourSuggestion_Feedback)
-    .should('not.exist')
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_Body)
+    .should('exist')
+    .should('contain.text','Question is required'); 
     
 
-  cy.get(AmatriumElements.mainScreen_SendYourSuggestion_CloseButton)
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_CloseButton)
     .should('exist')
     .should('have.text','Close') 
     .click();
 
- 
+  });
+
+  it('It will check Ask Amatrium Expert if succeeded', () => { 
+    cy.get(AmatriumElements.mainScreen_AskAmatriumExpert)
+    .should('exist')
+    .click();
+
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_TextBox_YourQuestion)
+    .should('exist')
+    .type('test');
+  
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_TextBox_YourMessage)
+    .should('exist')
+    .type('test');
+    
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_SendButton)
+    .should('exist') 
+    .should('have.text','Send') 
+    .click()
+    .wait(2000);
+     
+  cy.get(AmatriumElements.mainScreen_AskAmatriumExpert_CloseButton)
+    .should('exist')
+    .should('have.text','Close') 
+    .click();
 
   });
+
+
+
+
+
 
 });
 
